@@ -1,4 +1,5 @@
 import { ImageSourcePropType, View, StyleSheet } from "react-native";
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import * as ImagePicker from "expo-image-picker";
 import { useState } from "react";
 import ImageViewer from "@/components/ImageViewer";
@@ -51,7 +52,7 @@ export default function Index() {
         // we will implement this later
     };
     return (
-        <View style={styles.container}>
+        <GestureHandlerRootView style={styles.container}>
             <View style={styles.imageContainer}>
                 <ImageViewer
                     imgSource={PlaceholderImage}
@@ -96,7 +97,7 @@ export default function Index() {
                     onCloseModal={onModalClose}
                 />
             </EmojiPicker>
-        </View>
+        </GestureHandlerRootView>
     );
 }
 
